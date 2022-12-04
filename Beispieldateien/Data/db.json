@@ -1,0 +1,190 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Ensaladas",
+            "description": "Salate"
+        },
+        {
+            "id": 2,
+            "name": "Cremas y sopas",
+            "description": "Suppen"
+        },
+        {
+            "id": 3,
+            "name": "Tapas",
+            "description": "Kleine Portionen"
+        },
+        {
+            "id": 4,
+            "name": "Platos principales",
+            "description": "Hauptgerichte"
+        },
+        {
+            "id": 5,
+            "name": "Postres",
+            "description": "Desserts"
+        },
+        {
+            "id": 6,
+            "name": "Bebidas",
+            "description": "Getränke"
+        }
+    ],
+    "dishes": [
+        {
+            "id": 1,
+            "name": "Ensalada de Casa",
+            "description": "Salat nach Art des Hauses. Gemischter Salat, Mais, Paprika, Käse, Zwiebeln",
+            "price": 3.49,
+            "categoryId": 1
+        },
+        {
+            "id": 2,
+            "name": "Ensalada furia",
+            "description": "Gemischter Salat mit Chillis, Paprika, Radieschen und Zwiebeln (scharf!)",
+            "price": 3.99,
+            "categoryId": 1
+        },
+        {
+            "id": 3,
+            "name": "Sopa de Tomate",
+            "description": "Tomatensuppe",
+            "price": 3.29,
+            "categoryId": 2
+        },
+        {
+            "id": 4,
+            "name": "Crema de verduras",
+            "description": "Gemüsecremesuppe",
+            "price": 4.39,
+            "categoryId": 2
+        },
+        {
+            "id": 5,
+            "name": "Tortilla de patatas",
+            "description": "Spanisches Omlett aus Eiern und Kartoffeln",
+            "price": 4.99,
+            "categoryId": 3
+        },
+        {
+            "id": 6,
+            "name": "Patatas bravas",
+            "description": "Gebratene Kartoffelstücke in pikanter Sauce",
+            "price": 3.99,
+            "categoryId": 3
+        },
+        {
+            "id": 7,
+            "name": "Pimientos al grill",
+            "description": "Gegrillte Paprika",
+            "price": 2.99,
+            "categoryId": 3
+        },
+        {
+            "id": 8,
+            "name": "Pan con alioli",
+            "description": "Ailoli mit Brot",
+            "price": 2.29,
+            "categoryId": 3
+        },
+        {
+            "id": 9,
+            "name": "Pan con tomate y ajo",
+            "description": "Brot mit Tomate und Knoblauch",
+            "price": 2.29,
+            "categoryId": 3
+        },
+        {
+            "id": 10,
+            "name": "Tortilla Chips",
+            "description": "Tortilla Chips mit Salsa Dip, Guacamole oder Alioli",
+            "price": 1.29,
+            "categoryId": 3
+        },
+        {
+            "id": 11,
+            "name": "Chilli sin carne",
+            "description": "Vegetarisches Chilli, serviert mit Reis",
+            "price": 5.39,
+            "categoryId": 4
+        },
+        {
+            "id": 12,
+            "name": "Enchiladas de verduras",
+            "description": "Überbackene Maistortillas gefüllt mit Gemüse",
+            "price": 4.99,
+            "categoryId": 4
+        },
+        {
+            "id": 13,
+            "name": "Burritos de verduras",
+            "description": "Weizentortillas gefüllt mit Gemüse",
+            "price": 4.99,
+            "categoryId": 4
+        },
+        {
+            "id": 14,
+            "name": "Arroz con verduras",
+            "description": "Reis-/Gemüsepfanne",
+            "price": 4.49,
+            "categoryId": 4
+        },
+        {
+            "id": 15,
+            "name": "Empanadas de espinacas y maíz",
+            "description": "Teigtaschen gefüllt mit Spinat und Mais",
+            "price": 4.49,
+            "categoryId": 4
+        },
+        {
+            "id": 16,
+            "name": "Crema Catalana",
+            "description": "Katalanische Creme",
+            "price": 2.49,
+            "categoryId": 5
+        },
+        {
+            "id": 17,
+            "name": "Ensalada de frutas",
+            "description": "Obstsalat mit frischen Früchten",
+            "price": 2.99,
+            "categoryId": 5
+        },
+        {
+            "id": 18,
+            "name": "Churros",
+            "description": "Spritzgebäck mit Zucker",
+            "price": 1.99,
+            "categoryId": 5
+        },
+        {
+            "id": 19,
+            "name": "Agua mineral",
+            "description": "Mineralwasser",
+            "price": 1.59,
+            "categoryId": 6
+        },
+        {
+            "id": 20,
+            "name": "Zumo de manzana",
+            "description": "Apfelsaft",
+            "price": 1.59,
+            "categoryId": 6
+        },
+        {
+            "id": 21,
+            "name": "Limonada",
+            "description": "Zitronenlimonade",
+            "price": 1.59,
+            "categoryId": 6
+        },
+        {
+            "id": 22,
+            "name": "Café",
+            "description": "Kaffee",
+            "price": 1.59,
+            "categoryId": 6
+        }
+    ]
+}

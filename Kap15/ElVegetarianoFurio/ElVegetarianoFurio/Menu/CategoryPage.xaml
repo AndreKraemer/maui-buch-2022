@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:menu="clr-namespace:ElVegetarianoFurio.Menu"
+             x:Class="ElVegetarianoFurio.Menu.CategoryPage"
+             Title="{Binding Category.Name}"
+       x:DataType="menu:CategoryViewModel">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *">
+            <Border StrokeShape="RoundRectangle 0 0 15 15" StrokeThickness="0">
+                <Grid>
+                    <Image Source="{Binding Category.Id, StringFormat='category{0}.jpg'}" HeightRequest="200" Aspect="AspectFill"/>
+                    <VerticalStackLayout Padding="10" VerticalOptions="End" BackgroundColor="Black" Opacity="0.7">
+                        <Label Text="{Binding Category.Name}" Style="{StaticResource DishStyle}" TextColor="White"/>
+                        <Label Text="{Binding Category.Description}" FontAttributes="Italic" TextColor="White"/>
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+            <CollectionView Grid.Row="1" ItemsSource="{Binding Dishes}" Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="menu:Dish">
+                        <Grid Padding="10" RowDefinitions="Auto, Auto" ColumnDefinitions="60, *, Auto" RowSpacing="6" ColumnSpacing="6">
+                            <Image HeightRequest="60" WidthRequest="60" Aspect="AspectFill" Grid.RowSpan="2" Source="{Binding Id, StringFormat='dish{0}.jpg'}"/>
+                            <Label Grid.Column="1" Text="{Binding Name}" Style="{StaticResource DishStyle}" />
+                            <Label Grid.Column="2" Text="{Binding Price, StringFormat='{0:C}'}" Style="{StaticResource DishStyle}" />
+                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding Description}" FontAttributes="Italic"/>
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1"
+                            Command="{Binding Source={RelativeSource AncestorType={x:Type menu:CategoryViewModel}}, 
+                  Path=NavigateToDishCommand}" CommandParameter="{Binding}">
+                                </TapGestureRecognizer>
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

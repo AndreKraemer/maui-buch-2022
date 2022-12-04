@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.FlexLayoutJustifyContentSamplePage"
+             Title="FlexLayout Demo (JustifyContent)">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <FlexLayout JustifyContent="Start">
+                <Label Text="Start" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White" ></Label>
+                <Label Text="Start" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White" ></Label>
+                <Label Text="Start" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White" ></Label>
+                <Label Text="Start" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White" ></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="Center">
+                <Label Text="Center" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White" ></Label>
+                <Label Text="Center" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White" ></Label>
+                <Label Text="Center" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White" ></Label>
+                <Label Text="Center" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White" ></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="End">
+                <Label Text="End" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White" ></Label>
+                <Label Text="End" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White" ></Label>
+                <Label Text="End" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White" ></Label>
+                <Label Text="End" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White" ></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceBetween">
+                <Label Text="Space Between" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White"></Label>
+                <Label Text="Space Between" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White" ></Label>
+                <Label Text="Space Between" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White" ></Label>
+                <Label Text="Space Between" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White" ></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceAround">
+                <Label Text="Space Around" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White" ></Label>
+                <Label Text="Space Around" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White" ></Label>
+                <Label Text="Space Around" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White" ></Label>
+                <Label Text="Space Around" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White" ></Label>
+            </FlexLayout>
+            <FlexLayout JustifyContent="SpaceEvenly">
+                <Label Text="Space Evenly" WidthRequest="70" HeightRequest="70" BackgroundColor="#091F35" TextColor="White"></Label>
+                <Label Text="Space Evenly" WidthRequest="70" HeightRequest="70" BackgroundColor="#2097C8" TextColor="White"></Label>
+                <Label Text="Space Evenly" WidthRequest="70" HeightRequest="70" BackgroundColor="#F79330" TextColor="White"></Label>
+                <Label Text="Space Evenly" WidthRequest="70" HeightRequest="70" BackgroundColor="#76787A" TextColor="White"></Label>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

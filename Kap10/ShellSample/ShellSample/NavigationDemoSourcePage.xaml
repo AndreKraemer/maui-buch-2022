@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShellSample.NavigationDemoSourcePage">
+    <VerticalStackLayout Padding="20" Spacing="6">
+        <Label Text="Bitte geben Sie Ihren Vornamen ein" />
+        <Entry x:Name="FirstNameEntry"/>
+        <Label Text="Bitte geben Sie Ihren Nachnamen ein" />
+        <Entry x:Name="LastNameEntry"/>
+        <Label Text="Bitte geben Sie Ihr Alter ein" />
+        <Entry x:Name="AgeEntry" Keyboard="Numeric"/>
+        <Button Clicked="Button_Clicked" Text="Absenden"/>
+    </VerticalStackLayout>
+</ContentPage>

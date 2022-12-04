@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>ElVegetarianoFurio</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>ElVegetarianoFurio</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.elvegetarianofurio</ApplicationId>
+		<ApplicationIdGuid>FAE1F078-1007-4406-B7D9-C9E32D4CBB7F</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Resources\Fonts\FaSolid.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\credits.txt" />
+	  <MauiImage Remove="Resources\Images\license.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
+	  <None Remove="Resources\Fonts\ShadowsIntoLight-Regular.ttf" />
+	  <None Remove="Resources\Fonts\Sofia-Regular.ttf" />
+	  <None Remove="Resources\Images\category1.jpg" />
+	  <None Remove="Resources\Images\category2.jpg" />
+	  <None Remove="Resources\Images\category3.jpg" />
+	  <None Remove="Resources\Images\category4.jpg" />
+	  <None Remove="Resources\Images\category5.jpg" />
+	  <None Remove="Resources\Images\category6.jpg" />
+	  <None Remove="Resources\Images\dish1.jpg" />
+	  <None Remove="Resources\Images\dish10.jpg" />
+	  <None Remove="Resources\Images\dish11.jpg" />
+	  <None Remove="Resources\Images\dish12.jpg" />
+	  <None Remove="Resources\Images\dish13.jpg" />
+	  <None Remove="Resources\Images\dish14.jpg" />
+	  <None Remove="Resources\Images\dish15.jpg" />
+	  <None Remove="Resources\Images\dish16.jpg" />
+	  <None Remove="Resources\Images\dish17.jpg" />
+	  <None Remove="Resources\Images\dish18.jpg" />
+	  <None Remove="Resources\Images\dish19.jpg" />
+	  <None Remove="Resources\Images\dish2.jpg" />
+	  <None Remove="Resources\Images\dish20.jpg" />
+	  <None Remove="Resources\Images\dish21.jpg" />
+	  <None Remove="Resources\Images\dish22.jpg" />
+	  <None Remove="Resources\Images\dish3.jpg" />
+	  <None Remove="Resources\Images\dish4.jpg" />
+	  <None Remove="Resources\Images\dish5.jpg" />
+	  <None Remove="Resources\Images\dish6.jpg" />
+	  <None Remove="Resources\Images\dish7.jpg" />
+	  <None Remove="Resources\Images\dish8.jpg" />
+	  <None Remove="Resources\Images\dish9.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiFont Include="Core\FaSolid.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Menu\CategoryPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Menu\DishPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Profile\ProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

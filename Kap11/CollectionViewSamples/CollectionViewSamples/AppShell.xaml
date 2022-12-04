@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CollectionViewSamples.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CollectionViewSamples"
+    xmlns:views="clr-namespace:CollectionViewSamples.Views"
+>
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Einfaches Beispiel"  
+        Route="FirstSamplePage" 
+        ContentTemplate="{DataTemplate views:FirstSamplePage}" />
+    <ShellContent 
+        Title="Einträge selektieren"  
+        Route="SelectSamplePage" 
+        ContentTemplate="{DataTemplate views:SelectSamplePage}" />
+    <ShellContent 
+        Title="Kontextmenüs" 
+        Route="MenuSamplePage" 
+        ContentTemplate="{DataTemplate views:MenuSamplePage}" />
+    <ShellContent 
+        Title="Daten aktualisieren" 
+        Route="RefreshSamplePage" 
+        ContentTemplate="{DataTemplate views:RefreshSamplePage}" />
+    <ShellContent 
+        Title="Gruppierte Einträge" 
+        Route="GroupSamplePage" 
+        ContentTemplate="{DataTemplate views:GroupSamplePage}" />
+
+</Shell>

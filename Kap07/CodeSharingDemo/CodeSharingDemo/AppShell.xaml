@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CodeSharingDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CodeSharingDemo"
+    xmlns:views="clr-namespace:CodeSharingDemo.Views">
+
+    
+    <!-- Weitere Einträge -->
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Präprozessoranweisungen"
+        ContentTemplate="{DataTemplate views:PraeprozessorDemoPage}"
+        Route="PraeprozessorDemoPage" />
+
+    <ShellContent
+        Title="Partielle Klassen"
+        ContentTemplate="{DataTemplate views:PartialDemoPage}"
+        Route="PartialDemoPage" />
+
+    <ShellContent
+        Title="Partielle Klassen (via Dateinamen)"
+        ContentTemplate="{DataTemplate views:PartialFileNameBaseDemoPage}"
+        Route="PartialFileNameBaseDemoPage" />
+
+    <ShellContent
+        Title="Dependency Service"
+        ContentTemplate="{DataTemplate views:DependencyServiceDemoPage}"
+        Route="DependencyServiceDemoPage" />
+
+    <ShellContent
+        Title="Dependency Injection"
+        ContentTemplate="{DataTemplate views:DependencyInjectionDemoPage}"
+        Route="DependencyInjectionDemoPage" />
+
+
+</Shell>

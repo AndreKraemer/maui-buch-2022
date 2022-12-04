@@ -1,0 +1,35 @@
+﻿verticalstacklayout {
+    padding: 40;
+}
+
+.error {
+      background-color:red;
+      color: white;
+  }
+
+.warning {
+    background-color: orange;
+    color: white;
+}
+
+.success {
+    background-color: darkseagreen;
+    color: white;
+}
+
+.large {
+    font-size: 30;
+    padding: 20;
+}
+
+.medium {
+    font-size: 20;
+    padding: 10;
+}
+
+.small {
+    font-size: 10;
+    padding: 5;
+}
+
+

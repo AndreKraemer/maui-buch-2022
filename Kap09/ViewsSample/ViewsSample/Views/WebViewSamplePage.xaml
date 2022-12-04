@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsSample.Views.WebViewSamplePage"
+             Title="WebViewDemo">
+    <ContentPage.Content>
+        <Grid RowDefinitions="2*,*">
+            <WebView Source="https://dotnet.microsoft.com/"></WebView>
+            <WebView Grid.Row="1">
+                <WebView.Source>
+                    <HtmlWebViewSource>
+                        <HtmlWebViewSource.Html>
+                        <![CDATA[
+                        <!DOCTYPE html>
+                        <html><head><title>Demo</title></head>
+                        <body style="background-color:#2097C8;color:white;">
+                           <h1>Darstellung von inline Html</h1>
+                           <p>Auch inline Html kann dargestellt werden.</p>
+                        </body>
+                        </html>
+                        ]]>
+                        </HtmlWebViewSource.Html>
+                    </HtmlWebViewSource>
+                </WebView.Source>
+            </WebView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

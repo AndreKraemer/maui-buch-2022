@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ElVegetarianoFurio.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ElVegetarianoFurio"
+    xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <VerticalStackLayout Padding="30" BackgroundColor="DarkRed">
+                <Label FontSize="Large"
+           TextColor="White"
+           FontAttributes="Bold"
+           HorizontalOptions="Center">
+                    El Vegetariano Furio
+                </Label>
+            </VerticalStackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <ShellContent Title="Start" 
+    ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+
+    <FlyoutItem Title="Speisekarte" Route="menu">
+        <ShellContent Title="Ensaladas" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="ensaladas"/>
+        <ShellContent Title="Sopas" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="sopas"/>
+        <ShellContent Title="Tapas" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="tapas"/>
+        <ShellContent Title="Principales" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="principales"/>
+        <ShellContent Title="Postres" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="postres"/>
+        <ShellContent Title="Bebidas" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="bebidas"/>
+    </FlyoutItem>
+
+    <ShellContent Title="Kontakt" 
+      ContentTemplate="{DataTemplate local:MainPage}" Route="ContactPage"/>
+
+    <ShellContent Title="Profil"
+        ContentTemplate="{DataTemplate profile:ProfilePage}" Route="ProfilePage" />
+
+</Shell>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ElVegetarianoFurio.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ElVegetarianoFurio"
+    xmlns:core="clr-namespace:ElVegetarianoFurio.Core"
+    xmlns:menu="clr-namespace:ElVegetarianoFurio.Menu"
+    xmlns:profile="clr-namespace:ElVegetarianoFurio.Profile">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <VerticalStackLayout Padding="30" BackgroundColor="DarkRed">
+                <Label FontSize="Large"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   FontFamily="Sofia">
+                    El Vegetariano Furio
+                </Label>
+            </VerticalStackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <ShellContent Title="Start" 
+            ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" 
+                Glyph="{x:Static core:FaSolid.Home}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <FlyoutItem Title="Speisekarte" Route="menu">
+        <FlyoutItem.Icon>
+            <FontImageSource FontFamily="Fa-Solid" 
+                Glyph="{x:Static core:FaSolid.Utensils}" Color="Black"/>
+        </FlyoutItem.Icon>
+        <ShellContent Title="Ensaladas" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="ensaladas" >
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.Carrot}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Sopas" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="sopas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.UtensilSpoon}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Tapas" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="tapas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.PepperHot}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Principales" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="principales">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.Utensils}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Postres" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="postres">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.IceCream}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Bebidas" 
+            ContentTemplate="{DataTemplate menu:CategoryPage}" Route="bebidas">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.GlassCheers}"/>
+            </ShellContent.Icon>
+        </ShellContent>
+    </FlyoutItem>
+
+    <ShellContent Title="Kontakt" 
+      ContentTemplate="{DataTemplate local:MainPage}" Route="ContactPage">
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid" 
+                    Glyph="{x:Static core:FaSolid.MapMarkedAlt}" Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+    <ShellContent Title="Profil"
+        ContentTemplate="{DataTemplate profile:ProfilePage}" Route="ProfilePage" >
+        <ShellContent.Icon>
+            <FontImageSource FontFamily="Fa-Solid"
+                    Glyph="{x:Static core:FaSolid.UserCircle}"  Color="Black"/>
+        </ShellContent.Icon>
+    </ShellContent>
+
+</Shell>

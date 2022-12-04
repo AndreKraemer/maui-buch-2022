@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.NestedStackLayoutSamplePage"
+             Title="Nested StackLayout Demo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Label 1 (SL1)" BackgroundColor="#091F35" TextColor="White" VerticalOptions="FillAndExpand"/>
+            <Label Text="Label 2 (SL1)" BackgroundColor="#2097C8" TextColor="White" VerticalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Label 3 (SL2)" BackgroundColor="#091F35" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Label 4 (SL2)" BackgroundColor="#2097C8" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <Label Text="Label 5 (SL2)" BackgroundColor="#F79330" TextColor="White" HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Label 6 (SL3)" BackgroundColor="#091F35" TextColor="White" VerticalOptions="FillAndExpand"/>
+                    <Label Text="Label 7 (SL3)" BackgroundColor="#2097C8" TextColor="White" VerticalOptions="FillAndExpand"/>
+                    <Label Text="Label 8 (SL1)" BackgroundColor="#F79330" TextColor="White" VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+            <Label Text="Label 9 (SL1)" BackgroundColor="#76787A" TextColor="White" VerticalOptions="FillAndExpand"/>
+            <Label Text="Label 10 (SL1)" BackgroundColor="#F79330" TextColor="White" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

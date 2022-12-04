@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiDemo.MainPage"
+             BackgroundColor="#f0f1f7" 
+             Title="Login via XAML">
+    <VerticalStackLayout 
+            Spacing="25" 
+            Padding="30">
+        <Label FontSize="20" 
+               Text="Herzlich Willkommen zur .NET-MAUI-Demo"/>
+        <Border BackgroundColor="White" Padding="20" 
+                    Stroke="White" StrokeShape="RoundRectangle 10,10,10,10" >
+            <VerticalStackLayout Spacing="15">
+                <Label Text="Benutzername" TextColor="#6d6d6d"/>
+                <Entry Text="Wilhelm.Brause" />
+                <Label Text="Passwort" TextColor="#6d6d6d"/>
+                <Entry IsPassword="True"/>
+                <Button Text="Absenden"/>
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

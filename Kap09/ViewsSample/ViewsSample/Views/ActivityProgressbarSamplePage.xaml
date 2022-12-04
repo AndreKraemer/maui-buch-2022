@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsSample.Views.ActivityProgressbarSamplePage"
+             Title="Activity und Progressbar Demo">
+    <ContentPage.Content>
+        <FlexLayout Padding="20" JustifyContent="SpaceAround" Wrap="Wrap" AlignItems="Start" AlignContent="SpaceBetween">
+            <Label FontSize="Large" FlexLayout.Basis="100%">ActivityIndicator:</Label>
+            <ActivityIndicator x:Name="ActivityIndicator1" IsRunning="True" FlexLayout.Basis="100%"></ActivityIndicator>
+            <Button Clicked="ActivityOn_Clicked" Text="Activity An" Padding="10"></Button>
+            <Button Clicked="ActivityOff_Clicked" Text="Activity Aus" Padding="10"></Button>
+            <Label FontSize="Large" FlexLayout.Basis="100%">Progressbar:</Label>
+            <ProgressBar x:Name="ProgressBar1" FlexLayout.Basis="100%"></ProgressBar>
+            <Button Clicked="Button0_Clicked" Text="Progress 0" Padding="10"></Button>
+            <Button Clicked="Button33_Clicked" Text="Progress 33" Padding="10"></Button>
+            <Button Clicked="Button67_Clicked" Text="Progress 67" Padding="10"></Button>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

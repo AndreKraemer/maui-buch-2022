@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ImagesSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ImagesSample"
+    xmlns:views="clr-namespace:ImagesSample.Views">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Maui Bilder" 
+        Route="MauiImagesSamplePage" 
+        ContentTemplate="{DataTemplate views:MauiImagesSamplePage}" />
+    
+    <ShellContent 
+        Title="Plattformspezifische Bilder" 
+        Route="PlattformImagesSamplePage" 
+        ContentTemplate="{DataTemplate views:PlattformImagesSamplePage}" />
+    
+    <ShellContent 
+        Title="Eingebettete Bilder" 
+        Route="EmbeddedImagesSamplePage" 
+        ContentTemplate="{DataTemplate views:EmbeddedImagesSamplePage}" />
+    
+    <ShellContent 
+        Title="Schriftarten" 
+        Route="FontsSamplePage" 
+        ContentTemplate="{DataTemplate views:FontsSamplePage}" />
+    
+    <ShellContent Title="Icon-Schriftarten" 
+                  Route="FontIconsSamplePage" 
+                  ContentTemplate="{DataTemplate views:FontIconsSamplePage}" />
+
+
+</Shell>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.ScrollViewSamplePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label Text="Label 1" BackgroundColor="#091F35" Padding="50" TextColor="White"/>
+                <Label Text="Label 2" BackgroundColor="#2097C8" Padding="50" TextColor="White"/>
+                <Label Text="Label 3" BackgroundColor="#F79330" Padding="50" TextColor="White"/>
+                <Label Text="Label 4" BackgroundColor="#76787A" Padding="50" TextColor="White"/>
+                <Label Text="Label 5" BackgroundColor="#091F35" Padding="50" TextColor="White"/>
+                <Label Text="Label 6" BackgroundColor="#2097C8" Padding="50" TextColor="White"/>
+                <Label Text="Label 7" BackgroundColor="#F79330" Padding="50" TextColor="White"/>
+                <Label Text="Label 8" BackgroundColor="#76787A" Padding="50" TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

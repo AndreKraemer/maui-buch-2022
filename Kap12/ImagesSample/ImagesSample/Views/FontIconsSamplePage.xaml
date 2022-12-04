@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:imagesSample="clr-namespace:ImagesSample;assembly=ImagesSample"
+             x:Class="ImagesSample.Views.FontIconsSamplePage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label FontFamily="FontAwesome" Text="{x:Static imagesSample:FaIcons.Clock}" FontSize="50" TextColor="Blue"  />
+            <Label FontFamily="FontAwesome" Text="{x:Static imagesSample:FaIcons.Envelope}" FontSize="50" TextColor="Red"/>
+            <Label FontFamily="FontAwesome" Text="{x:Static imagesSample:FaIcons.Newspaper}" FontSize="50" TextColor="DarkOrange" />
+            <Label FontFamily="FontAwesome" Text="{x:Static imagesSample:FaIcons.ShareSquare}" FontSize="50" TextColor="MediumPurple" />
+            <Label FontFamily="FontAwesome" Text="{x:Static imagesSample:FaIcons.User}" FontSize="50" TextColor="SkyBlue"  />
+            <!--<Label FontFamily="FontAwesome" Text="#&e05a;" FontSize="30 />"-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

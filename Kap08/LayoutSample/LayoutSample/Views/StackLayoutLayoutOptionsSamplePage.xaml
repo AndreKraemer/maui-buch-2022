@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.StackLayoutLayoutOptionsSamplePage"
+             Title="StackLayout LayoutOptions Demo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Label 1 (HO: Start)" BackgroundColor="#091F35" TextColor="White" Padding="10" HorizontalOptions="Start" />
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 2 (HO: Center)" BackgroundColor="#2097C8" TextColor="White" Padding="10" HorizontalOptions="Center" />
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 3 (HO: End)" BackgroundColor="#F79330" TextColor="White" Padding="10" HorizontalOptions="End" />
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 4 (HO: Fill)" BackgroundColor="#76787A" TextColor="White" Padding="10" HorizontalOptions="Fill"/>
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 5 (HO:Start, VO: StartAndExpand)" BackgroundColor="#091F35" TextColor="White" Padding="10" HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 6 (HO: Center, VO: CenterAndExpand)" BackgroundColor="#2097C8" TextColor="White" Padding="10" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 7 (HO:End, VO: EndAndExpand) " BackgroundColor="#F79330" TextColor="White" Padding="10" HorizontalOptions="End" VerticalOptions="EndAndExpand"/>
+            <Line X2="1" Stroke="Black" Aspect="Fill"/>
+            <Label Text="Label 8 (HO: Fill, VO: FillAndExpand) " BackgroundColor="#76787A" TextColor="White" Padding="10" HorizontalOptions="Fill" VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

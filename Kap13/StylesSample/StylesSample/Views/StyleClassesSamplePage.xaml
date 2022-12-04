@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.Views.StyleClassesSamplePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStye" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style Class="Error" BasedOn="{StaticResource BaseStye}" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Red"/>
+            </Style>
+            <Style Class="Warning" BasedOn="{StaticResource BaseStye}" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="Orange"/>
+            </Style>
+            <Style Class="Success" BasedOn="{StaticResource BaseStye}" TargetType="Label">
+                <Setter Property="BackgroundColor" Value="DarkSeaGreen"/>
+            </Style>
+            <Style Class="Large" TargetType="Label">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="Padding" Value="20"/>
+            </Style>
+            <Style Class="Medium" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+            <Style Class="Small" TargetType="Label">
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label StyleClass="Error, Large" Text="Das ist eine Fehlermeldung"/>
+            <Label StyleClass="Warning, Medium" Text="Das ist eine Warnmeldung"/>
+            <Label StyleClass="Success, Small" Text="Das ist eine Erfolgsmeldung"/>
+            <Button Text="Das ist ein Button"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

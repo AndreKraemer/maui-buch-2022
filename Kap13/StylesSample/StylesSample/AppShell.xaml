@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="StylesSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StylesSample"
+    xmlns:views="clr-namespace:StylesSample.Views">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent 
+        Title="Implicit Styles Demo" 
+        Route="ImplicitStylesSamplePage" 
+        ContentTemplate="{DataTemplate views:ImplicitStylesSamplePage}" />
+    
+    <ShellContent 
+        Title="Explicit Styles Demo" 
+        Route="ExplicitStylesSamplePage" 
+        ContentTemplate="{DataTemplate views:ExplicitStylesSamplePage}" />
+    
+    <ShellContent 
+        Title="Style Classes Demo" 
+        Route="StyleClassesSamplePage"
+        ContentTemplate="{DataTemplate views:StyleClassesSamplePage}" />
+    
+    <ShellContent 
+        Title="CSS Demo" 
+        Route="CssSamplePage" 
+        ContentTemplate="{DataTemplate views:CssSamplePage}" />
+    
+    <ShellContent 
+        Title="Themes Demo" Route="ThemesSamplePage" 
+        ContentTemplate="{DataTemplate views:ThemesSamplePage}" />
+    
+    <ShellContent 
+        Title="Hell- / Dunkelmodus Demo" 
+        Route="DarkModeLightModeSamplePage"
+        ContentTemplate="{DataTemplate views:DarkModeLightModeSamplePage}" />
+
+
+
+
+</Shell>

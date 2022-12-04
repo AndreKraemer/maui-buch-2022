@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:LocalDataSample.ViewModels"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:models="clr-namespace:LocalDataSample.Models"
+             x:Class="LocalDataSample.Views.FoldersPage"
+             Title="Ordner in einer .NET MAUI App"
+             x:DataType="viewModels:FoldersViewModel">
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <CollectionView ItemsSource="{Binding Folders}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout x:DataType="models:Folder">
+                            <Label FontAttributes="Bold" Text="{Binding Name}"/>
+                            <Label FontAttributes="Italic" Text="{Binding Location}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

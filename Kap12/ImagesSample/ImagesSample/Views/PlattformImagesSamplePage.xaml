@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImagesSample.Views.PlattformImagesSamplePage"
+             Title="Plattformspezifische Bilder">
+    <ContentPage.Content>
+        <StackLayout >
+            <Image Source="qualitybytes_sample.png" WidthRequest="300" HeightRequest="300" BackgroundColor="Beige" VerticalOptions="CenterAndExpand"></Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

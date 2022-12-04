@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:styles="clr-namespace:StylesSample.Resources.Styles"
+       x:Class="StylesSample.Views.ThemesSamplePage"
+       BackgroundColor="{DynamicResource PageBackgroundColor}"
+       Shell.TitleColor="{DynamicResource PrimaryColor}"    
+       Shell.BackgroundColor="{DynamicResource PageBackgroundColor}"
+       Title="Themes Demo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Style TargetType="Label" x:Key="HeaderStyle">
+                        <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}"/>
+                        <Setter Property="FontSize" Value="30"/>
+                    </Style>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}"/>
+                        <Setter Property="FontSize" Value="15"/>
+                    </Style>
+                    <Style TargetType="Button" x:Key="ActionButtonStyle">
+                        <Setter Property="TextColor" Value="{DynamicResource PageBackgroundColor}"/>
+                        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                    </Style>
+                </ResourceDictionary>
+                <styles:LightTheme/>                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource HeaderStyle}" Text="Themes Demo" />
+            <Label Text="Bitte ein Theme auswählen" />
+            <Button Style="{StaticResource ActionButtonStyle}" Text="Light Theme" Clicked="LightTheme_Clicked"/>
+            <Button Style="{StaticResource ActionButtonStyle}" Text="Dark Theme" Clicked="DarkTheme_Clicked"/>
+            <Button Style="{StaticResource ActionButtonStyle}" Text="Green Theme" Clicked="GreenTheme_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

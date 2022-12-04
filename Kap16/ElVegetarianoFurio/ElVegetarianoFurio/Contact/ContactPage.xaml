@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:contact="clr-namespace:ElVegetarianoFurio.Contact"
+             x:Class="ElVegetarianoFurio.Contact.ContactPage"
+             x:DataType="contact:ContactViewModel"
+             Title ="{Binding Title}">
+    <VerticalStackLayout Spacing="6" Padding="20">
+        <Label Text="Besuche uns und genieße unsere leckeren Speisen!" 
+           Style="{StaticResource DishStyle}"  Padding="10"/>
+        <Label Text="Brunnenstraße 21"/>
+        <Label Text="53498 Bad Breisig"/>
+        <Button Text="Anfahrt" Command="{Binding NavigateCommand}"/>
+        <Button Text="Anruf" Command="{Binding CallCommand}"/>
+
+    </VerticalStackLayout>
+</ContentPage>

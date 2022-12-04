@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ElVegetarianoFurio.Profile"
+             x:Class="ElVegetarianoFurio.Profile.ProfilePage"
+             Title ="{Binding Title}"
+             x:DataType="local:ProfileViewModel">
+    <ContentPage.Content>
+        <Grid>
+            <VerticalStackLayout Padding="20" Spacing="6">
+                <Label FontSize="Large" Text="Wie erreichen wir dich?"/>
+                <Label Text="Name"/>
+                <Entry Text="{Binding FullName, Mode=TwoWay}"/>
+                <Label Text="Straße"/>
+                <Entry Text="{Binding Street, Mode=TwoWay}"/>
+                <Label Text="Plz"/>
+                <Entry Text="{Binding Zip, Mode=TwoWay}" Keyboard="Numeric"/>
+                <Label Text="Ort"/>
+                <Entry Text="{Binding City, Mode=TwoWay}"/>
+                <Label Text="Telefon"/>
+                <Entry Text="{Binding Phone, Mode=TwoWay}" Keyboard="Telephone"/>
+                <Button Text="Speichern" Command="{Binding SaveCommand}"/>
+            </VerticalStackLayout>
+            <Grid RowDefinitions="*,*" BackgroundColor="Black" Opacity="0.7" IsVisible="{Binding IsBusy}">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="End" Color="DeepSkyBlue"/>
+                <Label Text="Lade ..." FontSize="Title" TextColor="White" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

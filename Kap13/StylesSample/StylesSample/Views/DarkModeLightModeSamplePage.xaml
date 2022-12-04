@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.Views.DarkModeLightModeSamplePage"
+             Title="Hell- / Dunkelmodus Demo">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="LightPrimaryColor">#091F35</Color>
+            <Color x:Key="LightSecondaryColor">#2097C8</Color>
+            <Color x:Key="LightOnPrimaryColor">White</Color>
+            <Color x:Key="DarkPrimaryColor">#F79330</Color>
+            <Color x:Key="DarkSecondaryColor">#2097C8</Color>
+            <Color x:Key="DarkOnPrimaryColor">White</Color>
+            <Style TargetType="Label" x:Key="HeaderStyle">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}"/>
+                <Setter Property="FontSize" Value="28"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}"/>
+                <Setter Property="FontSize" Value="15"/>
+            </Style>
+            <Style TargetType="Button" x:Key="ActionButtonStyle">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightOnPrimaryColor}, Dark={StaticResource DarkOnPrimaryColor}}"/>
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource HeaderStyle}" Text="Hell- / Dunkelmodus Demo" />
+            <Label x:Name="CurrentThemeLabel"/>
+            <Button Style="{StaticResource ActionButtonStyle}" Text="Ein Button"/>
+            <Label Text="Ein Label" TextColor="{AppThemeBinding Light={StaticResource LightOnPrimaryColor}, Dark={StaticResource DarkSecondaryColor}}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

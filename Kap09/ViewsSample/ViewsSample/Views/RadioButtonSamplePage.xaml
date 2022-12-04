@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsSample.Views.RadioButtonSamplePage"
+             Title="RadioButton Demo">
+    <ContentPage.Content>
+<StackLayout Padding="20">
+    <Label FontSize="Large" Text="Bitte wählen Sie die erste Option:"></Label>
+    <RadioButton Content="Option 1a" GroupName="Option 1" Value="1a" CheckedChanged="RadioButtonGroup1_OnCheckedChanged"/>
+    <RadioButton Content="Option 1b" GroupName="Option 1" Value="1b" CheckedChanged="RadioButtonGroup1_OnCheckedChanged"/>
+    <RadioButton Content="Option 1c" GroupName="Option 1" Value="1c" CheckedChanged="RadioButtonGroup1_OnCheckedChanged"/>
+    <Label x:Name="Option1ResultLabel" FontAttributes="Bold"></Label>
+
+    <StackLayout RadioButtonGroup.GroupName="Option 2" Margin="0,20,0,0">
+        <Label FontSize="Large" Text="Bitte wählen Sie die erste Option:"></Label>
+        <RadioButton Content="Option 2a" Value="2a" CheckedChanged="RadioButtonGroup2_OnCheckedChanged"/>
+        <RadioButton Content="Option 2b" Value="2b" CheckedChanged="RadioButtonGroup2_OnCheckedChanged"/>
+        <RadioButton Content="Option 2c" Value="2c" CheckedChanged="RadioButtonGroup2_OnCheckedChanged"/>
+        <Label x:Name="Option2ResultLabel" FontAttributes="Bold"></Label>
+    </StackLayout>
+</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

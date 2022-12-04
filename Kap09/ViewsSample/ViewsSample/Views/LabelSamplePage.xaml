@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsSample.Views.LabelSamplePage"
+             Title="Label Demo">
+    <ContentPage.Content>
+        <StackLayout Spacing="50" Padding="10">
+            <Label x:Name="MeinLabel">Das ist ein Label</Label>
+            <Label Text="Das ist ein &#10;mehrzeiliges &#10;Label"></Label>
+            <Label Text="Formatiertes Label" FontSize="Large" TextDecorations="Underline" FontAttributes="Bold, Italic"/>
+            <Label TextType="Html">
+                <Label.Text>
+                <![CDATA[
+                    <p>In diesem <em>Label</em> wird <strong>HTML</strong> <small>dargestellt</small>.</p>
+                    ]]>
+                </Label.Text>
+            </Label>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="In diesem "/>
+                        <Span FontAttributes="Italic" Text="Label "/>
+                        <Span Text="wird "/>
+                        <Span FontAttributes="Bold" Text="kein HTML "/>
+                        <Span FontSize="Small" Text="dargestellt"/>
+                        <Span>.</Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

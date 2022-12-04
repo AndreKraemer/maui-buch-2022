@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebserviceSample.Views.SpeakersPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:WebserviceSample.ViewModels"  
+             xmlns:model="clr-namespace:WebserviceSample.Models"  
+             x:DataType="local:SpeakersViewModel"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Neu" Command="{Binding AddSpeakerCommand}" />
+    </ContentPage.ToolbarItems>
+    <RefreshView  Command="{Binding LoadSpeakersCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Speakers}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!--<SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Löschen"
+                                           BackgroundColor="Red"
+                                           Command="{Binding Source={RelativeSource 
+                                       AncestorType={x:Type local:SpeakersViewModel}}, 
+                                       Path=DeleteSpeakerCommand}"
+                                           CommandParameter="{Binding}" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>-->
+
+                        <VerticalStackLayout Padding="10" x:DataType="model:Speaker">
+                            <Label Text="{Binding FullName}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            <Label Text="{Binding Company}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SpeakersViewModel}}, Path=SpeakerTapped}"		
+                                CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </VerticalStackLayout.GestureRecognizers>
+                        </VerticalStackLayout>
+                    <!--</SwipeView>-->
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

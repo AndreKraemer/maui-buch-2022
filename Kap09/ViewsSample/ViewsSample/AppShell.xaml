@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ViewsSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ViewsSample"
+    xmlns:views="clr-namespace:ViewsSample.Views">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+
+    <ShellContent 
+        Title="Label Demo" 
+        ContentTemplate="{DataTemplate views:LabelSamplePage}" 
+        Route="LabelSamplePage"/>
+    
+    <ShellContent 
+        Title="WebView Demo" 
+        ContentTemplate="{DataTemplate views:WebViewSamplePage}"
+        Route="WebViewSamplePage"/>
+    
+    <ShellContent 
+        Title="Activity / Progressbar Demo" 
+        ContentTemplate="{DataTemplate views:ActivityProgressbarSamplePage}" 
+        Route="ActivityProgressbarSamplePage"/>
+
+    <ShellContent 
+        Title="Border Demo" 
+        ContentTemplate="{DataTemplate views:BorderSamplePage}" 
+        Route="BorderSamplePage"/>
+
+    <ShellContent 
+        Title="Shadow Demo" 
+        ContentTemplate="{DataTemplate views:ShadowSamplePage}" 
+        Route="ShadowSamplePage"/>
+
+    <ShellContent 
+        Title="Shapes Demo" 
+        ContentTemplate="{DataTemplate views:ShapesSamplePage}" 
+        Route="ShapesSamplePage"/>
+
+    <ShellContent 
+        Title="Entry / Editor Demo" 
+        ContentTemplate="{DataTemplate views:TextSamplePage}" 
+        Route="TextSamplePage"/>
+    
+    <ShellContent 
+        Title="Button Demo" 
+        ContentTemplate="{DataTemplate views:ButtonSamplePage}" 
+        Route="ButtonSamplePage"/>
+    
+    <ShellContent 
+        Title="RadioButton Demo" 
+        ContentTemplate="{DataTemplate views:RadioButtonSamplePage}" 
+        Route="RadioButtonSamplePage"/>
+    
+    <ShellContent 
+        Title="Checkbox Demo" 
+        ContentTemplate="{DataTemplate views:CheckBoxSamplePage}" 
+        Route="CheckBoxSamplePage"/>
+    
+    <ShellContent 
+        Title="Switch Demo" 
+        ContentTemplate="{DataTemplate views:SwitchSamplePage}" 
+        Route="SwitchSamplePage"/>
+    
+    <ShellContent 
+        Title="Picker Demo" 
+        ContentTemplate="{DataTemplate views:PickerSamplePage}"
+        Route="PickerSamplePage"/>
+    
+    <ShellContent 
+        Title="DatePicker / TimePicker Demo" 
+        ContentTemplate="{DataTemplate views:DatePickerTimePickerSamplePage}" 
+        Route="DatePickerTimePickerSamplePage"/>
+    
+    <ShellContent 
+        Title="MVVM Demo" 
+        ContentTemplate="{DataTemplate views:MvvmSamplePage}" 
+        Route="MvvmSamplePage"/>
+</Shell>

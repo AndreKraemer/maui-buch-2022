@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.GridSpanSamplePage"
+             Title="Grid Row- / Columnspan Demo">
+    <ContentPage.Content>
+        <Grid RowDefinitions="100, auto, *" ColumnDefinitions="3*, 2*" ColumnSpacing="1" RowSpacing="1">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Text="Label 1: Row 0 (100), Col 0 (3*)" BackgroundColor="#091F35" TextColor="White"  />
+            <Label Grid.Row="1" Grid.Column="0" Text="Label 2: Row 1 (auto), Col 0 (3*)" BackgroundColor="#2097C8"  TextColor="White" />
+            <Label Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Text="Label 3: Row 1 (auto), Col 1 (2*)" BackgroundColor="#F79330" TextColor="White"  />
+            <Label Grid.Row="2" Grid.Column="0" Text="Label 4: Row 2 (*), Col 0 (3*)" BackgroundColor="#76787A" TextColor="White"  />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

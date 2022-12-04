@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.AbsoluteLayoutSamplePage"
+             Title="AbsoluteLayout Demo">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <!--<Rectangle AbsoluteLayout.LayoutBounds="0.3,20,0.7,150" 
+    AbsoluteLayout.LayoutFlags="XProportional, WidthProportional"
+                       Fill="#2097C8"/>-->
+              <Rectangle AbsoluteLayout.LayoutBounds="10,20,320,150"
+       Fill="#2097C8"/>             
+            <Label AbsoluteLayout.LayoutBounds="20,40,180,40" Padding ="10"
+                   BackgroundColor="#091F35" TextColor="White" Text="Wilhelm Brause" />
+            <Label AbsoluteLayout.LayoutBounds="260,120,60,40" Padding ="10"
+                   BackgroundColor="#091F35" TextColor="White" Text="2021" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsSample.Views.CheckBoxSamplePage"
+             Title="CheckBox Demo">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,auto,auto,auto" ColumnDefinitions="auto,auto" Margin="20">
+            <CheckBox  VerticalOptions="Center"></CheckBox>
+            <Label Text="Option 1" Grid.Column="1" VerticalOptions="Center"></Label>
+            <CheckBox Grid.Row="1" VerticalOptions="Center"></CheckBox>
+            <Label Text="Option 2" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"></Label>
+            <CheckBox Grid.Row="2" VerticalOptions="Center"></CheckBox>
+            <Label Text="Option 3" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"></Label>
+            <CheckBox Grid.Row="3" VerticalOptions="Center"></CheckBox>
+            <Label Text="Option 4" Grid.Row="3" Grid.Column="1" VerticalOptions="Center"></Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

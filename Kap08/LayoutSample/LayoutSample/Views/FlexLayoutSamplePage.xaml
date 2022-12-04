@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutSample.Views.FlexLayoutSamplePage"
+             Title="FlexLayout Demo">
+    <ContentPage.Content>
+        <FlexLayout Wrap="Wrap" JustifyContent="SpaceAround" Padding="5">
+            <Label Text="Label 1" WidthRequest="220" HeightRequest="160" BackgroundColor="#091F35" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 2" WidthRequest="120" HeightRequest="160" BackgroundColor="#2097C8" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 3" WidthRequest="120" HeightRequest="160" BackgroundColor="#F79330" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 4" WidthRequest="220" HeightRequest="160" BackgroundColor="#76787A" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 5" WidthRequest="120" HeightRequest="160" BackgroundColor="#091F35" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 6" WidthRequest="120" HeightRequest="160" BackgroundColor="#2097C8" TextColor="White" FontSize="Large"></Label>
+            <Label Text="Label 7" WidthRequest="120" HeightRequest="160" BackgroundColor="#F79330" TextColor="White" FontSize="Large"></Label>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

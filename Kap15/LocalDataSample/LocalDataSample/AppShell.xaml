@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LocalDataSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LocalDataSample"
+    xmlns:views="clr-namespace:LocalDataSample.Views">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent Title="Ordner" ContentTemplate="{DataTemplate views:FoldersPage}" Route="FoldersPage"  />
+    <ShellContent Title="Data Demo" ContentTemplate="{DataTemplate views:ItemsPage}" Route="ItemsPage"  />
+</Shell>

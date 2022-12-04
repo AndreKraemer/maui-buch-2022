@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="LayoutSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:LayoutSample"
+    xmlns:views="clr-namespace:LayoutSample.Views">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="StackLayout Demo"
+        ContentTemplate="{DataTemplate views:StackLayoutSamplePage}"
+        Route="StackLayoutSamplePage" />
+
+    <ShellContent 
+        Title="StackLayout LayoutOptions Demo" 
+        ContentTemplate="{DataTemplate views:StackLayoutLayoutOptionsSamplePage}"
+        Route="StackLayoutLayoutOptionsSamplePage"/>
+
+    <ShellContent 
+        Title="VerticalStackLayout LayoutOptions Demo" 
+        ContentTemplate="{DataTemplate views:VerticalStackLayoutSamplePage}"
+        Route="VerticalStackLayoutSamplePage"/>
+
+
+    <ShellContent 
+        Title="HorizontalStackLayout LayoutOptions Demo" 
+        ContentTemplate="{DataTemplate views:HorizontalStackLayoutSamplePage}"
+        Route="HorizontalStackLayoutSamplePage"/>
+
+
+    <ShellContent 
+        Title="Nested StackLayout" 
+        ContentTemplate="{DataTemplate views:NestedStackLayoutSamplePage}" 
+        Route="NestedStackLayoutSamplePage"/>
+
+    <ShellContent 
+        Title="Grid Demo" 
+        ContentTemplate="{DataTemplate views:GridSamplePage}"
+        Route="GridSamplePage"/>
+
+    <ShellContent 
+        Title="Grid Row- / Columnspan Demo" 
+        ContentTemplate="{DataTemplate views:GridSpanSamplePage}" 
+        Route="GridSpanSamplePage"/>
+    
+    <ShellContent 
+        Title="AbsoluteLayout Demo" 
+        ContentTemplate="{DataTemplate views:AbsoluteLayoutSamplePage}" 
+        Route="AbsoluteLayoutSamplePage"/>
+    
+    <ShellContent 
+        Title="FlexLayout Demo" 
+        ContentTemplate="{DataTemplate views:FlexLayoutSamplePage}"
+        Route="FlexLayoutSamplePage"/>
+    
+    <ShellContent 
+        Title="FlexLayout Demo (JustifyContent)" 
+        ContentTemplate="{DataTemplate views:FlexLayoutJustifyContentSamplePage}"
+        Route="FlexLayoutJustifyContentSamplePage"/>
+   
+    <ShellContent 
+        Title="ScrollView Demo"
+        ContentTemplate="{DataTemplate views:ScrollViewSamplePage}"
+        Route="ScrollViewSamplePage"/>
+
+</Shell>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Restschuldrechner"
+             Padding="20"
+             x:Class="Restschuldrechner.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:DoubleConverter x:Key="DoubleConverter"></local:DoubleConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Label Style="{DynamicResource TitleStyle}">Restschuldrechner</Label>
+
+            <StackLayout x:Name="OuterLayout">
+                <StackLayout>
+                    <Label Style="{DynamicResource SubtitleStyle}">Angaben zum Darlehen</Label>
+                    <Label>Darlehenshöhe (€)</Label>
+                    <Entry Text="{Binding KreditSumme, 
+       Converter={StaticResource DoubleConverter}}"></Entry>
+                    <Label>Zinssatz (%)</Label>
+                    <Entry Text="{Binding Zinsfuss, 
+       Converter={StaticResource DoubleConverter}}"></Entry>
+                    <Label>Anfängliche Tilgung (%)</Label>
+                    <Entry Text="{Binding TilgungsSatz, 
+       Converter={StaticResource DoubleConverter}}"></Entry>
+                    <Label>Zinsbindung (Jahre)</Label>
+                    <Entry Text="{Binding Zinsbindung}"></Entry>
+
+                </StackLayout>
+                <StackLayout>
+                    <Label Style="{DynamicResource SubtitleStyle}">Ergebnis</Label>
+                    <Label>Zahlungen
+                    </Label>
+                    <Label Text="{Binding Zahlungen, StringFormat='{0:C}'}"></Label>
+                    <Label>Davon Zinsen</Label>
+                    <Label Text="{Binding Zinszahlungen, StringFormat='{0:C}'}"></Label>
+                    <Label>Davon Tilgung</Label>
+                    <Label Text="{Binding Tilgung, StringFormat='{0:C}'}"></Label>
+                    <Label>Restschuld</Label>
+                    <Label Text="{Binding Restschuld, StringFormat='{0:C}'}"></Label>
+
+                </StackLayout>
+                <StackLayout>
+                    <Label Style="{DynamicResource SubtitleStyle}">Ergebnis (grafisch)</Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Rectangle WidthRequest="30" 
+                BackgroundColor="Gray" 
+                HeightRequest="250">
+                        </Rectangle>
+
+                        <Rectangle WidthRequest="30" 
+                HeightRequest="{Binding AnteilRestschuld}"
+                BackgroundColor="Red"
+                VerticalOptions="End" >
+                        </Rectangle>
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

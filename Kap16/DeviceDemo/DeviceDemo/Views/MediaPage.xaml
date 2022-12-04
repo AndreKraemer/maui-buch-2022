@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DeviceDemo.ViewModels"
+             x:Class="DeviceDemo.Views.MediaPage"
+             x:DataType="vm:MediaViewModel">
+    <Grid Padding="20" RowSpacing="6" RowDefinitions="Auto, Auto, *">
+        <Button Text="Fotos auswählen" Command="{Binding OpenGalleryCommand}" Grid.Row="0"/>
+        <Button Text="Fotos aufnehmen" Command="{Binding OpenCameraCommand}" Grid.Row="1"/>
+        <Image Source="{Binding Image}" Grid.Row="2" Aspect="AspectFit"/>
+    </Grid>
+</ContentPage>

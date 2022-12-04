@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesSample.Views.CssSamplePage">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/Styles.css"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <VerticalStackLayout>
+            <Label StyleClass="error, medium" Text="Das ist eine Fehlermeldung"/>
+            <Label StyleClass="warning, small" Text="Das ist eine Warnmeldung"/>
+            <Label StyleClass="success, large" Text="Das ist eine Erfolgsmeldung"/>
+            <Button Text="Das ist ein Button"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

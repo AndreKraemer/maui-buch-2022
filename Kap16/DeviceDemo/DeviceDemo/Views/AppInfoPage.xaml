@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:DeviceDemo.ViewModels"
+             x:Class="DeviceDemo.Views.AppInfoPage"
+             x:DataType="vm:AppInfoViewModel">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Name der App" FontSize="Large"/>
+        <Label Text="{Binding Name}"/>
+        <Label Text="App-Version" FontSize="Large"/>
+        <Label Text="{Binding Version}"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShellSample"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#091F35" Padding="20">
+                <Label Text="Shell Demo" FontSize="Large" TextColor="White"/>
+                <Label Text=".NET MAUI Shell" TextColor="White"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+
+    <ShellContent Icon="home.png" Title="Startseite" 
+        ContentTemplate="{DataTemplate local:MainPage}" 
+        Route="MainPage" />
+
+    <ShellContent Icon="settings.png" Title="Einstellungen" 
+        ContentTemplate="{DataTemplate local:SettingsPage}" 
+        Route="SettingsPage" />
+
+    <ShellContent Icon="navigation.png" Title="Navigation" 
+        ContentTemplate="{DataTemplate local:NavigationDemoSourcePage}" 
+        Route="NavigationDemoSourcePage" />
+
+    <MenuItem IconImageSource="info.png" Text="Info"
+        Clicked="MenuItem_Clicked"/>
+    
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="#2097C8" Padding="20">
+                <Label Text="Footer der" FontSize="Large" TextColor="White"/>
+                <Label Text=".NET MAUI Shell" TextColor="White"/>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+</Shell>
+
+
+
