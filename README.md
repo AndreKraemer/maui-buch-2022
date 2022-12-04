@@ -13,6 +13,12 @@ Inhalt der Beispiel-App ist die Umsetzung einer Speisekarten-App für das fiktiv
 
 ![Screenshot der Beispiel-App Ell Vegetariano Furio unter Android, iOS und Windows](./images/el-vegetariano-furio-sample-app.png)
 
+## Beispiele für .NET 6 und .NET 7
+
+Die Beispiele für dieses Buch wurden ursprünglich für .NET 6 geschrieben. Kurz vor der Veröffentlichung des Buchs kam .NET 7 heraus. Da .NET 7 einige Verbesserungen für .NET MAUI gebracht hat, habe ich mich dazu entschieden, die Beispiele im main-branch auf .NET 7 zu aktualisieren. Um diese Beispiele ausführen zu können, benötigen Sie Visual Studio 2022, Update 17.4 oder höher.
+
+Im Branch net-6 finden Sie die ursprünglichen .NET 6 Beispiele. Zur Ausführung dieser Beispiele benötigen Sie Visual Studio 2022 Update 17.3 oder höher.
+
 ## Fehler, Korrekturen und Kontakt.
 Korrekturen zu fachlichen Fehlern im Buch sowie Rechtschreibkorrekturen finden Sie auf der Webseite zu diesem Buch, die Sie unter https://www.andrekraemer.de/maui-buch erreichen.
 
@@ -20,7 +26,7 @@ Eventuelle Fehler in den Codebeispielen werde ich kontinuierlich auf diesem GitH
 Wenn Sie in den Beispielen einen Fehler finden sollten, der noch nicht korrigiert ist, dann lade ich Sie herzlich dazu ein, einen Issue über das GitHub-Repository anzulegen.
 
 Scheuen Sie sich nicht, mich bei Fragen oder Anmerkungen zum Buch direkt per E-Mail unter andre@andrekraemer.de oder auf Twitter unter https://twitter.com/codemurai anzuschreiben.
-Bitte haben Sie aber Verständnis dafür, dass ich unter der E-Mail-Adresse nur Fragen, die sich direkt auf den Inhalt des Buches beziehen, beantworten kann.
+Bitte haben Sie aber Verständnis dafür, dass ich unter der E-Mail-Adresse nur Fragen, die sich direkt auf den Inhalt des Buchs beziehen, beantworten kann.
 Darüber hinausgehende Fragen kläre ich jedoch gerne in Schulungen und Workshops, die Sie auch unter dieser E-Mail-Adresse anfragen können.
 
 ## Links
@@ -39,6 +45,6 @@ Falls Sie beim Kompilieren der Beispiele folgenden Fehler erhalten, fehlt bei Ih
 Could not find android.jar for API level 31. This means the Android SDK platform for API level 31 is not installed. Either install it in the Android SDK Manager (Tools > Android > Android SDK Manager...), or change the Xamarin.Android project to target an API version that is installed. (C:\Program Files (x86)\Android\android-sdk\platforms\android-31\android.jar missing.)
 ```
 
-Zur Fehlerbehebung müssen Sie lediglich das fehlende Android-SDK nachinstallieren. Öffnen Sie dazu in Visual Studio den *Android-SDK-Manager* im  Menü *Extras | Android*
+Zur Fehlerbehebung müssen Sie lediglich das fehlende Android-SDK nachinstallieren. Öffnen Sie dazu in Visual Studio den *Android-SDK-Manager* im Menü *Extras | Android*
 
 ![Installation des fehlenden Android SDK](./images/install-android-sdk-manager.png)
